@@ -12,15 +12,15 @@ I think that the use of `width: calc(25% - 4em - 2px);` seems like bad practice.
 
 2. My favorite ES2015 feature is probably template strings
 
-Instead of:
-```
-"htttp://www.ibm.com/design/" + user + "/profile/default.html"
-```
-You can now do:
-```
-`http://wwww.ibm.com/design/${user}/profile/default.html`
-```
-Also multiline strings are nice.
+    >Instead of:
+    >```
+    >"htttp://www.ibm.com/design/" + user + "/profile/default.html"
+    >```
+    >You can now do:
+    >```
+    >`http://wwww.ibm.com/design/${user}/profile/default.html`
+    >```
+    >Also multiline strings are nice.
 
 3. 'i' will be 10 each time it's logged. This is caused by closure. The reason for this is because the function inside the set timeout will be executed after the for loop has completed and reference the last stored value of i, which in this case is 10.
 
