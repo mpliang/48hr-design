@@ -20,11 +20,11 @@ I think that the use of `width: calc(25% - 4em - 2px);` seems like bad practice.
     >```
     >`http://wwww.ibm.com/design/${user}/profile/default.html`
     >```
-    >Also multiline strings are nice.
+    >With more variables, string concatenation can be extremely ugly. In addition, multiline strings are also much nicer with template strings.
 
-3. 'i' will be 10 each time it's logged. This is caused by closure. The reason for this is because the function inside the set timeout will be executed after the for loop has completed and reference the last stored value of i, which in this case is 10.
+3. 'i' will be 10 each time it's logged. This is caused by closure. The reason for this is because the function inside the set timeout will be executed after the for loop has completed and reference the last stored value of 'i', which in this case is 10.
 
-    >The easiest way to fix this is with es6 and just changing var to let in the for >loop:
+    >The easiest way to fix this is with es6 and just changing var to let in the for loop:
     >```javascript
     >for (let i = 0; i < 10; i++) {
     >    setTimeout(function () {
