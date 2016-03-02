@@ -1,12 +1,12 @@
 #48 Hour Questionnaire
 
-###1
+###Question 1:
 
 I think that the use of `width: calc(25% - 4em - 2px);` seems like bad practice. I would just stick with 2 values in the calculation and not use a mixture of %, em, and px. Also there is only a single media query. To be more responsive, I would account for more screen sizes. I think I would also use pixels for things like padding and margins and em or rem for font sizes. I did like that there was the use of a media query and flexbox display.
 
 ***
 
-###2
+###Question 2:
 
 1. '===' means it will evaluate if the expression is strictly equal to while '==' will use type coercion to try and evaluate. In my opinion, you should always use '===' to avoid type coercion and any unexpected errors.
 
@@ -76,7 +76,7 @@ let fib = (n) => {
 ```
 ***
 
-###3
+###Question 3:
 - I. My favorite project is probably the one I'm working on now. It's an app that tracks your budget for you each month, reminds you of bills, and also allows you to split things like rent, gas, and other miscellaneous bills with either your roommates or friends. It uses the venmo and facebook apis as well as d3. I really like this app because of how much I've learned and I feel like it is a practical app that people might actually use someday.
 
 - II. This is a personal side project so I've contributed everything so far, both front end and backend as well as the design.
