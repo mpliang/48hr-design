@@ -24,47 +24,47 @@ I think that the use of `width: calc(25% - 4em - 2px);` seems like bad practice.
 
 3. 'i' will be 10 each time it's logged. This is caused by closure. The reason for this is because the function inside the set timeout will be executed after the for loop has completed and reference the last stored value of i, which in this case is 10.
 
-The easiest way to fix this is with es6 and just changing var to let in the for loop:
-```javascript
-for (let i = 0; i < 10; i++) {
-    setTimeout(function () {
-        console.log(i);
-    }, i * 100)
-}
-```
-If using es5, here are some other solutions:
-```javascript
-//wrapping the set timeout in an iffe and passing in i
-for (var i = 0; i < 10; i++) {
-  ( function(x) {
-    setTimeout( function() {
-      console.log(x);
-    }, x*100);
-  })(i);
-}
+    >The easiest way to fix this is with es6 and just changing var to let in the for >loop:
+    >```javascript
+    >for (let i = 0; i < 10; i++) {
+    >    setTimeout(function () {
+    >        console.log(i);
+    >    }, i * 100)
+    >}
+    >```
+    >If using es5, here are some other solutions:
+    >```javascript
+    >//wrapping the set timeout in an iffe and passing in i
+    >for (var i = 0; i < 10; i++) {
+    >  ( function(x) {
+    >    setTimeout( function() {
+    >      console.log(x);
+    >    }, x*100);
+    >  })(i);
+    >}
 
-//returns function
-for (var i = 0; i < 10; i++) {
-  setTimeout((function(x) {
-    return function(){
-      console.log(x);
-    }
-  })(i), i*100);
-}
+    >//returns function
+    >for (var i = 0; i < 10; i++) {
+    >  setTimeout((function(x) {
+    >    return function(){
+    >      console.log(x);
+    >    }
+    >  })(i), i*100);
+    >}
 
-// third argument for set timeout
-for (var i = 0; i < 10; i++) {
-  setTimeout(function(n) {
-    console.log(n)
-  }, i*100, i);
-}
+    >// third argument for set timeout
+    for (var i = 0; i < 10; i++) {
+    >  setTimeout(function(n) {
+    >    console.log(n)
+    >  }, i*100, i);
+    >}
 
-//binding console and i
-for (var i = 0; i < 10; i++) {
-  setTimeout(console.log.bind(console, i), i*100);
-}
+    >//binding console and i
+    >for (var i = 0; i < 10; i++) {
+    >  setTimeout(console.log.bind(console, i), i*100);
+    >}
 
-```
+    >```
 
 4. Fibonacci sequence
 
