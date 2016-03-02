@@ -68,12 +68,12 @@ I think that the use of `width: calc(25% - 4em - 2px);` seems like bad practice.
 
 4. Fibonacci sequence
 
-```javascript
-let fib = (n) => {
-    if (n<3) return 1;
-    else return fibonacci(n-1) + fibonacci(n-2);
-}
-```
+    >```javascript
+    >let fib = (n) => {
+    >    if (n<3) return 1;
+    >    else return fibonacci(n-1) + fibonacci(n-2);
+    >}
+    >```
 ***
 
 ###Question 3:
