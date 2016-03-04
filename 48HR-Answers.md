@@ -34,7 +34,7 @@ I think that the use of `width: calc(25% - 4em - 2px);` seems like bad practice.
     >```
     >If using es5, here are some other solutions:
     >```javascript
-    >//wrapping the set timeout in an iffe and passing in i
+    >//wrapping the set timeout in a function wrapped in an iffe and passing in i
     >for (var i = 0; i < 10; i++) {
     >  ( function(x) {
     >    setTimeout( function() {
