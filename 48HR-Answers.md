@@ -55,7 +55,7 @@ I think that the use of `width: calc(25% - 4em - 2px);` seems like bad practice.
     >// third argument for set timeout
     for (var i = 0; i < 10; i++) {
     >  setTimeout(function(n) {
-    >    console.log(n)
+    >    console.log(n);
     >  }, i*100, i);
     >}
 
